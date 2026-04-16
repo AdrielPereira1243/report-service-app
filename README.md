@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Service Report 📊
 
-## Getting Started
+**Service Report** (Relatório de Serviço de Campo) é uma aplicação web moderna projetada para facilitar o registro e o acompanhamento de horas mensais, visitas e contatos. 
 
-First, run the development server:
+Um sistema de produtividade pessoal construído para ajudar a organizar suas atividades e manter seu histórico seguro, e sempre a mão.
+
+## 🚀 Funcionalidades
+
+- **Visão Mensal (Mês):** Acompanhe seu progresso de horas, publicações distribuídas, revisitas e estudos no mês atual de forma rápida e intuitiva.
+- **Histórico:** Mantenha um registro completo de todos os meses anteriores para análises retrospectivas.
+- **Pessoas (Contatos):** Gerencie os seus contatos, incluindo informações importantes e detalhes de acompanhamento.
+- **Revisitas (Follow-ups):** Acompanhe os retornos e pessoas interessadas com eficiência.
+- **Configurações:** Adapte a experiência e defina suas metas.
+
+## 💻 Tecnologias e Ferramentas
+
+O projeto foi construído utilizando um ecossistema moderno focado em performance, simplicidade e experiência de usuário:
+
+- **[Next.js](https://nextjs.org/)** (App Router)
+- **[React 19](https://react.dev/)**
+- **[Tailwind CSS v4](https://tailwindcss.com/)** para estilização rápida e responsiva
+- **[sql.js](https://github.com/sql-js/sql.js)** para gerenciamento de banco de dados SQLite diretamente no navegador/ambiente local
+- **[TypeScript](https://www.typescriptlang.org/)** para maior segurança no código
+
+## 🛠️ Como Executar o Projeto
+
+### Pré-requisitos
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) (versão 18+) instalado na sua máquina.
+
+### Passos de Instalação
+
+1. Clone ou baixe o repositório.
+2. Instale as dependências executando na raiz do projeto:
+
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação em funcionamento.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A arquitetura do projeto segue o padrão App Router do Next.js e está dividida em módulos lógicos (`_features`, `_components`, `_lib`):
 
-## Learn More
+- `/app`: Páginas da aplicação e layouts principais (`/contacts`, `/history`, `/settings`, etc.).
+- `/app/_components`: Componentes visuais reutilizáveis em toda a aplicação (como a `AppShell`).
+- `/app/_features`: Regras de negócio e componentes específicos de cada domínio da aplicação (como o `planner`).
+- `/app/_lib`: Código de infraestrutura, incluindo conexão com banco de dados (`sqliteClient`).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Feito para registrar horas mensais de forma simples e eficiente.*
